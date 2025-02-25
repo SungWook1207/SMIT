@@ -42,11 +42,15 @@ class Bird extends Animal implements Flyable {
 
 // 5️⃣ 객체 생성 및 테스트
 const dog = new Dog("바둑이");
+console.log(dog.name); // "바둑이"
 dog.speak(); // "바둑이: 멍멍!"
 
+
 const cat = new Cat("나비");
+console.log(cat.name); // "나비"
 cat.speak(); // "나비: 야옹!"
 
 const bird = new Bird("참새");
+console.log(bird.name); // "참새"
 bird.speak(); // "참새: 짹짹!"
 bird.fly(); // "참새가 하늘을 날고 있습니다."

@@ -1,3 +1,4 @@
+/* ---------- 📌 interface vs. type ---------- */
 
 // interface 확장 방법
 interface Person {
@@ -65,7 +66,9 @@ class Cat implements Speakable {
 type Status = "success" | "error" | "pending";  // Status는 "success" | "error" | "pending" 중에 하나만 될 수 있음.
 
 
+/* ---------- 📌 js to ts ---------- */
 
+// 03_JS_basic2.js 에서 사용했던 userInformation을 TS로 바꿔보기
 interface UserInfo {
     name: string;
     age: number;
@@ -75,8 +78,7 @@ interface UserInfo {
     baptised: boolean;
 }
 
-// 03_JS_basic2.js 에서 사용했던 userInformation을 TS로 바꿔보기
-function userInformation(name:string, age:number, gender:string, favoriteNumbers: number[], mostFavoriteBibleVerse: string[], baptised) : UserInfo {
+function userInformation(name:string, age:number, gender:string, favoriteNumbers: number[], mostFavoriteBibleVerse: string[], baptised: boolean) : UserInfo {
     return {
         name: name,
         age: age,
@@ -90,29 +92,49 @@ function userInformation(name:string, age:number, gender:string, favoriteNumbers
 const me = userInformation("Sung Wook Yoo", 31, "Male", [2, 7, 8, 12, 13, 22], ["Proverbs 16:9", "Psalms 1:1-3"], true);
 console.log(me);
 
-// Class
-class Animal {
-    name: string;
 
-    constructor(name: string) {
-        this.name = name;
+/* ---------- 📌 Class ---------- */
+
+class Car {
+    maker: string;
+    model: string;
+    info: string;
+
+    // constructor 설명 중요
+    constructor(maker:string, model: string) {
+        this.maker = maker;
+        this.model = model;
+        this.info = `이 차는 ${this.maker}의 ${this.model}입니다.`;
     }
 
-    speak(): void {
-        console.log(`${this.name}가 소리를 냅니다.`);
+    printInfo(): void {
+        console.log(this.info);
+    }
+
+    sound(): void {}
+}
+
+class Gasoline extends Car {
+    // Gasoline은 Car를 상속한다
+    info = this.info + " 아주 힘이 좋지요."
+
+    sound() {
+        console.log("부릉 부릉!")
     }
 }
 
-class Dog extends Animal {
-    // Dog는 Animal을 상속한다
-    constructor(name: string) {
-        super(name);
-    }
+class EV extends Car {
+    info = this.info + " 아주 조용하지요."
 
-    speak(): void {
-        console.log(`${this.name}가 멍멍 짖습니다.`);
+    sound() {
+        console.log("우우웅")
     }
 }
 
-const myDog = new Dog("바둑이");
-myDog.speak();  // "바둑이가 멍멍 짖습니다."
+const wrangler = new Gasoline("Jeep", "Wrangler");
+wrangler.printInfo();
+wrangler.sound();
+
+const model3 = new EV("Tesla", "Model 3");
+model3.printInfo();
+model3.sound();
