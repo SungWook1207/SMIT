@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flexbox 예제</title>
+    <!--        스타일 태그 말고 디렉토리 안의 CSS 파일을 import 하는 방법-->
+    <!--        <link rel="stylesheet" href="styles.css">-->
+    <style>
+        body {
+            margin: 0;
+        }
+
+        #flex_box_container {
+            display: flex;
+            justify-content: center; /* space-between space-around end ... */
+            align-items: center;
+            height: 400px;
+            background-color: #ff8484;
+            gap: 16px;
+        }
+
+        .boxes {
+            background-color: #ffe284;
+            width: 200px;
+            height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="flex_box_container">
+        <div id="box1" class="boxes">
+            1
+        </div>
+        <div id="box2" class="boxes">
+            2
+        </div>
+        <div id="box3" class="boxes">
+            3
+        </div>
+    </div>
+
+</body>
+</html>

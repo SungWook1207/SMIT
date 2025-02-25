@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>숫자 증가/감소 버튼</title>
+  <!--    과제 부분 -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 50px;
+    }
+    .counter {
+      font-size: 2em;
+      margin: 20px;
+    }
+    .buttons button {
+      font-size: 1.5em;
+      padding: 10px 20px;
+      margin: 5px;
+      cursor: pointer;
+    }
+  </style>
+  <!--    과제 부분 -->
+</head>
+<body>
+<h1>숫자 증가/감소</h1>
+<div class="counter" id="counter">0</div>
+<div class="buttons">
+  <!--    과제 부분 -->
+  <button onclick="increase()">Up</button>
+  <button onclick="decrease()">Down</button>
+  <!--    과제 부분 -->
+</div>
+
+<script>
+  let count = 0;
+  const minLimit = -5;
+  const maxLimit = 5;
+  const counterElement = document.getElementById("counter");
+  <!--    과제 부분 -->
+  function increase() {
+    if (count < maxLimit) {
+      count++;
+      counterElement.textContent = count;
+    } else {
+      window.alert("더 이상 올릴 수 없습니다.");
+    }
+  }
+
+  function decrease() {
+    if (count > minLimit) {
+      count--;
+      counterElement.textContent = count;
+    } else {
+      window.alert("더 이상 내릴 수 없습니다.");
+    }
+  }
+  <!--    과제 부분 -->
+</script>
+</body>
+</html>

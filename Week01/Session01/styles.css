@@ -1,0 +1,19 @@
+body {
+    margin: 0;
+}
+
+#flex_box_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    background-color: #ff8484;
+    gap: 16px;
+}
+
+.boxes {
+    background-color: #ffe284;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+}
