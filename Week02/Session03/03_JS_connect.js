@@ -17,3 +17,48 @@ function multiply() {
     }
     document.getElementById("multiplication").innerText = `${num1}x${num2}= ${parseInt(num1)*parseInt(num2)}`;
 }
+
+function putHTML() {
+    const htmlContainer = document.getElementById("put-HTML");
+    htmlContainer.innerHTML = `
+        <div class="new-box">
+                <h2>안녕하세요!</h2>
+                <p>이 글은 innerHTML로 만들어졌습니다.</p>
+        </div>   
+    `
+}
+
+const users = [
+    {
+        name: "유성욱",
+        age: 31,
+        comment: "만나서 반갑습니다! 저는 유성욱 입니다."
+    },
+    {
+        name: "김요셉",
+        age: 32,
+        comment: "처음 뵙겠습니다! 저는 김요셉 입니다."
+    },
+    {
+        name: "박모세",
+        age: 33,
+        comment: "만나서 반가워요! 저는 박모세 입니다."
+    },
+];
+
+const displayUsers = () => {
+    const userContainer = document.getElementById("user-container");
+    userContainer.classList.add("new-container");
+    userContainer.style.display = "flex";
+    userContainer.style.gap = "10px";
+    users.forEach((user) => {
+        const userCard = document.createElement("div");
+        userCard.classList.add("user-card");
+        userCard.innerHTML = `
+            <h3>이름: ${user.name}</h3>
+            <p>나이: ${user.age}</p>
+            <p>한마디: ${user.comment}</p>
+        `
+        userContainer.appendChild(userCard);
+    })
+}

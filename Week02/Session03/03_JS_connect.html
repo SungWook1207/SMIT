@@ -12,6 +12,20 @@
                 background: lightgray;
                 border-radius: 10px;
             }
+            .new-container {
+                width: fit-content;
+                margin: 20px auto;
+            }
+            .new-box {
+                width: 400px;
+                padding: 10px;
+                background: lightblue;
+                border-radius: 30px;
+            }
+            .user-card {
+                padding: 10px;
+                background: beige;
+            }
         </style>
     </head>
     <body>
@@ -25,7 +39,14 @@
             <p id="multiplication">버튼을 눌러 숫자를 써주세요</p>
             <button onclick="multiply()">숫자 곱하기</button>
         </div>
+        <button onclick="putHTML()">HTML 만들기</button>
+        <div id="put-HTML" class="new-container">
 
+        </div>
+        <button onclick="displayUsers()">유저 불러오기</button>
+        <div id="user-container">
+
+        </div>
         <script src="03_JS_connect.js"></script>
     </body>
 </html>
