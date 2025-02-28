@@ -114,7 +114,7 @@ function userInformation(name, age, gender, favoriteNumbers, mostFavoriteBibleVe
     }
 }
 
-const me = userInformation("Sung Wook Yoo", 31, "Male", [2, 7, 8, 12, 13, 22], "Proverbs 16:9", true);
+const me = userInformation("Sung Wook Yoo", 31, "Male", [2, 7, 8, 12, 13, 22], ["Proverbs 16:9", "Psalms 1:1-3"], true);
 console.log(me);
 
 // ETC

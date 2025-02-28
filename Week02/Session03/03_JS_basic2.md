@@ -1,35 +1,130 @@
-Week 2: JavaScript 조건문 & 반복문 강의 스크립트
-=====================================
+# 2주차 3세션: JavaScript 조건문 & 반복문
 
-- 이번 세션에는 JavaScript의 **조건문 (if, switch)** 및 **반복문 (for, while)**, JS와 HTML 연결을 배운다.
-- 이 두 가지 개념은 프로그램이 특정 조건에서 다르게 실행되도록 하고, 반복적으로 작업을 수행할 수 있도록 도와준다.
+## 📌 세션 개요
+- **주제**: JavaScript 조건문과 반복문
+- **목표**: 조건문(`if-else`, `switch`), 반복문(`for`, `while`)을 이해하고 활용할 수 있다.
+- **시간**: 2시간
+- **필수 도구**: Code Sandbox, 인터넷 연결
 
-🎯 **학습 목표:**
-1. if-else 조건문과 switch 문의 차이를 이해하고 활용할 수 있다.
-2. for문과 while문을 사용하여 반복적인 작업을 수행할 수 있다.
-3. map과 foreach 차이.
-   - 둘 다 배열을 순회(iterate)하는 메서드지만, 차이가 있음!
-   - map()
-     - 새로운 배열을 생성하여 반환
-     - 각 요소를 변형한 후 새로운 배열을 리턴
+---
+
+## 1. 오프닝 (10분)
+### ✅ 강의 목표
+- `if-else` 조건문과 `switch` 문을 이해하고 활용
+- `for` 문과 `while` 문을 사용하여 반복적인 작업 수행
+- `map`과 `forEach`의 차이점 이해
+- 조건문과 반복문을 조합하여 간단한 프로그램 구현
+
+### ✅ JavaScript에서 조건문과 반복문이 중요한 이유
+- 조건문은 **특정 조건에서 코드 실행 여부를 결정**하는 역할을 한다.
+- 반복문은 **반복적인 작업을 자동화**하여 코드의 효율성을 높인다.
+
+---
+
+## 2. 조건문 (40분)
+
+### 🔹 if-else 조건문
+```js
+let age = 20;
+
+if (age >= 18) {
+    console.log("성인입니다.");
+} else {
+    console.log("미성년자입니다.");
+}
+```
+
+### 🔹 else-if 활용한 다중 조건
+```js
+let score = 85;
+
+if (score >= 90) {
+    console.log("A 학점입니다.");
+} else if (score >= 80) {
+    console.log("B 학점입니다.");
+} else if (score >= 70) {
+    console.log("C 학점입니다.");
+} else {
+    console.log("F 학점입니다.");
+}
+```
+
+### 🔹 switch 문 (가독성 개선)
+```js
+let day = "월요일";
+
+switch (day) {
+    case "월요일":
+        console.log("한 주의 시작입니다!");
+        break;
+    case "금요일":
+        console.log("주말이 다가옵니다!");
+        break;
+    case "토요일":
+        console.log("휴식 시간입니다!");
+        break;
+    case "일요일":
+        console.log("주일입니다!");
+        break;
+    default:
+        console.log("일반적인 하루입니다.");
+}
+```
+
+---
+
+## 3. 반복문 (40분)
+
+### 🔹 for 문을 이용한 반복 실행
+```js
+for (let i = 1; i <= 5; i++) {
+    console.log("반복 중: ", i);
+}
+```
+
+### 🔹 while 문을 이용한 반복 실행
+```js
+let count = 1;
+while (count <= 5) {
+    console.log("현재 count: ", count);
+    count++;
+}
+```
+
+### 🔹 map()과 forEach() 차이점
 ```js
 const numbers = [1, 2, 3, 4, 5];
 
-// 각 요소를 2배로 만들고 새로운 배열 반환
+// map(): 새로운 배열을 반환
 const doubled = numbers.map(num => num * 2);
 console.log(doubled); // [2, 4, 6, 8, 10]
-```
-   - foreach()
-     - 배열을 순회하며 각 요소에 대해 작업을 수행
-     - 새로운 배열을 반환하지 않음 (즉, return 값이 없음)
-```js
-const numbers = [1, 2, 3, 4, 5];
 
+// forEach(): 새로운 배열을 반환하지 않음
 numbers.forEach(num => {
     console.log(num * 2); // 각 요소를 2배로 출력
 });
 ```
-4. 조건문과 반복문을 조합하여 간단한 게임이나 프로그램을 구현할 수 있다.
 
-## 과제
-- 조건문과 반복문을 활용한 **가위바위보 게임** 구현
+---
+
+## 4. 실습: js와 html 연동 (30분)
+
+- 03_JS_connect.html & js 참조
+---
+
+## 5. 마무리 (20분)
+### ✅ 오늘 배운 내용 정리
+- `if-else`, `switch` 조건문
+- `for`, `while` 반복문
+- `map()`과 `forEach()` 차이점
+- 조건문과 반복문을 활용한 가위바위보 게임 구현
+
+### ✅ 과제
+1. **사용자로부터 숫자를 입력받아 1부터 해당 숫자까지의 합을 구하는 프로그램 작성**
+2. **컴퓨터가 1~100 사이의 숫자를 랜덤으로 선택하고, 사용자가 맞출 때까지 반복하는 업다운 게임 구현**
+
+---
+
+## 🎯 2주차 3세션 완료!
+"오늘 배운 내용을 연습하면서 JavaScript의 핵심 문법을 익혀보세요! 다음 주에는 JavaScript로 DOM을 조작하는 방법을 배워봅니다." 🚀
+
