@@ -8,12 +8,21 @@
 
 ---
 
-## ✅ Setting Up the Development Environment (1시간)
+## ✅ 지난 Session 과제 확인 (45분)
+- Git에 대해서 조사 발표
+- https://codesandbox.io/p/sandbox/05-product-list-xd54nr
+
+---
+
+## ✅ Install VSCode (10분)
+- https://code.visualstudio.com/download
+---
+
+## ✅ Setting Up the Development Environment (20분)
 ### ● Node.js, npm/yarn, VS Code 설치 및 설정
 1. **Node.js 설치**
     - [Node.js 공식 사이트](https://nodejs.org/)에서 LTS 버전 다운로드 및 설치
     - `node -v` 및 `npm -v`로 설치 확인
-    - npm 대신 Yarn 사용 시 `npm install --global yarn` 실행
 
 2. **VS Code 설치 및 기본 설정**
     - [VS Code 공식 사이트](https://code.visualstudio.com/)에서 다운로드 및 설치
@@ -47,24 +56,24 @@
 
 ---
 
-## ✅ Introduction to Git & GitHub (1시간)
+## ✅ Introduction to Git & GitHub (45분)
 ### ● git init, git add, git commit, git push 명령어 실습
 1. **새로운 Git 저장소 생성 및 초기화**
-   ```sh
+   ```bash
    mkdir my-project
    cd my-project
    git init
    ```
 
 2. **파일 추가 및 커밋**
-   ```sh
+   ```bash
    echo "# My Project" > README.md
    git add README.md
    git commit -m "첫 커밋"
    ```
 
 3. **GitHub 원격 저장소 연결 및 코드 업로드**
-   ```sh
+   ```bash
    git remote add origin https://github.com/your-username/my-project.git
    git branch -M main
    git push -u origin main
@@ -72,14 +81,14 @@
     - GitHub에서 저장소가 정상적으로 생성되었는지 확인
 
 4. **기본적인 Git 명령어 연습**
-   ```sh
+   ```bash
    git status
    git log
    git pull origin main
    ```
 
 5. **협업을 위한 Git 브랜치 실습**
-   ```sh
+   ```bash
    git checkout -b feature-branch
    git push -u origin feature-branch
    ```

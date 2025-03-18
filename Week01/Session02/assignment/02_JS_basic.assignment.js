@@ -1,6 +1,5 @@
 // set two numbers: num1, num2
-// const num1 = 34;
-// const num2 = 15;
+
 
 // Define the sum, difference of the two numbers: sum, sub
 
