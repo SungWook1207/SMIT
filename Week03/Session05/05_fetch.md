@@ -1,4 +1,4 @@
-# 3주차 5세션: JavaScript API 호출
+# 3주차 세션 5: JavaScript API 호출
 
 ## 📌 세션 개요
 - **주제**: API 호출 및 데이터 처리
