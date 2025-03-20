@@ -77,7 +77,7 @@ axios.get('https://jsonplaceholder.typicode.com/todos/1')
 - `.then()` 체인보다 직관적인 방식으로 API 요청을 처리할 수 있음
 - `await` 키워드는 `Promise`가 완료될 때까지 기다림
 - `.then()` 체인보다 가독성이 높고 유지보수에 유리
-- `try-catch` 문을 사용해 에러를 쉽게 처리 가능
+- `try-catch` 문을 사용해 에러를 쉽게 처리 가능 (try-catch-finally)
 - `await`을 통해 순차적으로 코드 실행 가능
 
 #### async/await을 사용한 API 호출

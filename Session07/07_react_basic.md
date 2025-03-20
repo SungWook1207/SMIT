@@ -9,7 +9,8 @@
 
 ---
 
-### 📝 지난주 과제 확인
+### 📝 지난 세션 복습 / 과제 확인
+- git, npm
 - React에 대해서 조사해온 것 쉐어링
 - React Install 잘 했는지 확인
 ---
@@ -159,7 +160,7 @@ export default Counter;
 ## 5. 실습: 간단한 컴포넌트와 상태 관리 구현
 
 ### ✅ 실습 목표
-- `useState`를 활용하여 text input/display 기능능을 만든다.
+- `useState`를 활용하여 text input/display 기능을 만든다.
 - 버튼 클릭 시 UI가 업데이트되는 것을 확인한다.
 
 ### ✅ 구현할 기능
@@ -179,6 +180,7 @@ export default Counter;
 - 실습: 간단한 text input/display 구현현
 
 ### ✅ 과제
+- to-do list 만들기
 - 사용자가 입력한 할 일을 목록으로 추가하고, 삭제할 수 있도록 구현한다.
 - useState를 활용하여 배열 상태를 관리하는 방법을 익힌다.
 - React의 리스트 렌더링 및 이벤트 핸들링을 연습한다.
